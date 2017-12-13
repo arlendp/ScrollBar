@@ -1,0 +1,26 @@
+{
+  "name": "scrollbar",
+  "version": "1.0.0",
+  "description": "a js plugin to make your list scrollable",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arlendp/ScrollBar.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "arlendp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arlendp/ScrollBar/issues"
+  },
+  "homepage": "https://github.com/arlendp/ScrollBar#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "rollup-plugin-babel": "^3.0.2"
+  }
+}

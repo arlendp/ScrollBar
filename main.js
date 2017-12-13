@@ -264,8 +264,8 @@ var ScrollBar = function () {
 
 function initScrollBar(options) {
   var scrollbar = new ScrollBar(options);
-  scrollbar.generateElems();
-  scrollbar.bindMouseEvent();
+  scrollbar._generateElems();
+  scrollbar._bindMouseEvent();
   return scrollbar;
 }
 

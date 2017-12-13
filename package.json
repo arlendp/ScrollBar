@@ -1,5 +1,5 @@
 {
-  "name": "scrollbar",
+  "name": "scrollbar.js",
   "version": "1.0.0",
   "description": "a js plugin to make your list scrollable",
   "main": "main.js",

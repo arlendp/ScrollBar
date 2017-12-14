@@ -39,21 +39,22 @@ var ScrollBar = function () {
           var nodeStyle = document.defaultView.getComputedStyle(elem);
           var parentDisplay = document.defaultView.getComputedStyle(elem.parentElement).display;
           var recordParentDisplay = parentDisplay;
-          node.style.cssText = nodeStyle.cssText;
+          // node.style.cssText = nodeStyle.cssText;
           node.style.display = nodeStyle.display === 'none' ? 'block' : nodeStyle.display;
           node.style.zIndex = -1;
           elem.parentElement.style.display = parentDisplay === 'none' ? 'block' : parentDisplay;
           elem.parentElement.appendChild(node);
           offsetPadding = node.firstElementChild.nextElementSibling.offsetLeft - node.firstElementChild.offsetLeft - node.firstElementChild.clientWidth;
+          node.style.paddingRight = offsetPadding + 'px';
           this.spacing = offsetPadding / 2;
           clientWidth = node.clientWidth;
           elem.parentElement.removeChild(node);
           elem.parentElement.style.display = recordParentDisplay;
         } else {
           offsetPadding = secondChild.offsetLeft - firstChild.offsetLeft - firstChild.clientWidth;
+          elem.style.paddingRight = offsetPadding + 'px';
           clientWidth = elem.clientWidth;
         }
-        elem.style.paddingRight = offsetPadding + 'px';
         var leftElem = getCopyElem(elem);
         leftElem.style.left = -clientWidth + 'px';
         // remove selected style
@@ -67,7 +68,7 @@ var ScrollBar = function () {
 
         function getCopyElem(elem) {
           var newElem = elem.cloneNode(true);
-          newElem.style.cssText = document.defaultView.getComputedStyle(elem).cssText;
+          // newElem.style.cssText = document.defaultView.getComputedStyle(elem).cssText;
           return newElem;
         }
       }
@@ -255,7 +256,7 @@ var ScrollBar = function () {
   }, {
     key: '_trigger',
     value: function _trigger(elem, j) {
-      this.callback(elem, j);
+      this.callback(j);
     }
   }]);
 
